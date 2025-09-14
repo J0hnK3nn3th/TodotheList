@@ -292,105 +292,118 @@
 @media (max-width: 768px) {
   .todo-list {
     margin-top: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .stats-container {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
   }
   
   .stats-container .row {
-    margin: 0 -5px;
+    margin: 0 -3px;
     display: flex;
     flex-direction: row;
+    gap: 0;
   }
   
   .stats-container .col-12 {
-    padding: 0 5px;
+    padding: 0 3px;
     flex: 1;
     max-width: 33.333%;
   }
   
   .stats-card {
     margin-bottom: 0px;
-    min-height: 80px;
+    min-height: 60px;
     display: flex;
     align-items: center;
+    border-radius: 12px;
   }
   
   .stats-card .card-body {
-    padding: 20px 15px;
+    padding: 12px 8px;
     width: 100%;
+    text-align: center;
   }
   
   .stats-card h5 {
-    font-size: 1.4rem;
-    margin-bottom: 6px !important;
+    font-size: 1.2rem;
+    margin-bottom: 2px !important;
+    line-height: 1.2;
   }
   
   .stats-card small {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    line-height: 1;
   }
   
   .unified-task-card {
-    height: 300px;
-    margin-bottom: 15px;
+    height: calc(100vh - 200px);
+    margin-bottom: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .task-items-container {
-    max-height: 180px; /* Much reduced height for tablet */
+    max-height: calc(100vh - 280px);
+    flex: 1;
   }
   
   .unified-task-card .card-header {
-    padding: 15px;
+    padding: 12px;
+    flex-shrink: 0;
   }
   
   .unified-task-card .card-header .d-flex {
-    flex-direction: row;
-    gap: 8px;
-    align-items: center !important;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch !important;
   }
   
   .unified-task-card .card-header .d-flex .d-flex {
-    width: auto;
+    width: 100%;
     flex-direction: row;
-    gap: 6px;
+    gap: 8px;
     align-items: center !important;
-    flex: 1;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
   
   .filter-container {
     flex: 1;
-    min-width: 100px;
-    max-width: 150px;
+    min-width: 120px;
+    max-width: 200px;
   }
   
   .filter-select {
     width: 100%;
-    min-width: 100px;
+    min-width: 120px;
     font-size: 0.8rem;
-    padding: 6px 8px;
-    height: 38px;
+    padding: 8px 12px;
+    height: 40px;
     box-sizing: border-box;
   }
   
   .unified-task-card .card-header h5 {
-    font-size: 1.2rem;
-    width: auto;
-    flex-shrink: 0;
-    margin: 0;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 8px 0;
   }
   
   .unified-task-card .add-task-btn {
     width: auto;
-    padding: 6px 12px;
+    padding: 8px 16px;
     font-size: 0.8rem;
     justify-content: center;
     flex-shrink: 0;
-    height: 38px;
+    height: 40px;
     display: flex;
     align-items: center;
+    min-width: 100px;
   }
   
   .empty-state {
@@ -421,75 +434,88 @@
 /* Extra small devices (phones, 480px and down) */
 @media (max-width: 480px) {
   .todo-list {
-    margin-top: -5px;
+    margin-top: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .stats-container {
-    margin-bottom: -5px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
   }
   
   .stats-container .row {
-    margin: 0 -3px;
+    margin: 0 -2px;
     display: flex;
     flex-direction: row;
   }
   
   .stats-container .col-12 {
-    padding: 0 3px;
+    padding: 0 2px;
     flex: 1;
     max-width: 33.333%;
   }
   
   .stats-card {
     margin-bottom: 0px;
-    min-height: 70px;
+    min-height: 50px;
     padding: 0;
+    border-radius: 8px;
   }
   
   .stats-card .card-body {
-    padding: 10px 8px;
+    padding: 8px 6px;
   }
   
   .stats-card h5 {
-    font-size: 1.2rem;
-    margin-bottom: 4px !important;
+    font-size: 1rem;
+    margin-bottom: 2px !important;
+    line-height: 1.1;
   }
   
   .stats-card small {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
+    line-height: 1;
   }
   
   .unified-task-card {
-    height: 250px;
-    margin-bottom: 10px;
+    height: calc(100vh - 180px);
+    margin-bottom: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .task-items-container {
-    max-height: 130px; /* Much reduced height for mobile */
+    max-height: calc(100vh - 260px);
+    flex: 1;
   }
   
   .unified-task-card .card-header {
-    padding: 8px;
+    padding: 10px;
+    flex-shrink: 0;
   }
   
   .unified-task-card .card-header h5 {
-    font-size: 1.1rem;
-    width: auto;
-    flex-shrink: 0;
-    margin: 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 6px 0;
   }
   
   .unified-task-card .add-task-btn {
-    padding: 5px 10px;
+    padding: 6px 12px;
     font-size: 0.75rem;
     flex-shrink: 0;
     height: 36px;
     display: flex;
     align-items: center;
+    min-width: 80px;
   }
   
   .filter-select {
-    padding: 5px 8px;
+    padding: 6px 10px;
     font-size: 0.75rem;
     min-width: 100px;
     height: 36px;
@@ -498,6 +524,7 @@
   
   .filter-container {
     min-width: 100px;
+    max-width: 150px;
   }
   
   .empty-state {

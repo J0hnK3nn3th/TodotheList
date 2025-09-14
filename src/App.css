@@ -269,25 +269,28 @@ html, body {
   .App {
     padding: 0px 0;
     overflow-x: hidden;
+    height: 100vh;
   }
   
   .container-fluid {
-    padding: 0 15px;
+    padding: 0 10px;
     max-width: 100%;
     overflow-x: hidden;
+    height: 100%;
   }
   
   .row {
-    margin: 0 -10px;
+    margin: 0 -5px;
+    height: 100%;
   }
   
   .col-lg-8,
   .col-md-10 {
-    padding: 0 10px;
+    padding: 0 5px;
   }
   
   .card {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   
   .btn {
@@ -296,19 +299,23 @@ html, body {
   }
   
   .display-4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
   
   header {
-    padding: 10px 0 !important;
+    padding: 8px 0 !important;
+    margin-bottom: 10px;
   }
   
   header h1 {
-    font-size: 2.2rem !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.25rem;
   }
   
   header p {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0;
   }
 }
 
@@ -316,37 +323,44 @@ html, body {
   .App {
     padding: 0px 0;
     overflow-x: hidden;
+    height: 100vh;
   }
   
   .container-fluid {
-    padding: 0 10px;
+    padding: 0 8px;
     max-width: 100%;
     overflow-x: hidden;
+    height: 100%;
   }
   
   .row {
-    margin: 0 -5px;
+    margin: 0 -4px;
+    height: 100%;
   }
   
   .col-lg-8,
   .col-md-10 {
-    padding: 0 5px;
+    padding: 0 4px;
   }
   
   .display-4 {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 0.25rem;
   }
   
   header {
-    padding: 5px 0 !important;
+    padding: 6px 0 !important;
+    margin-bottom: 8px;
   }
   
   header h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.2rem;
   }
   
   header p {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 0;
   }
   
   .btn {
