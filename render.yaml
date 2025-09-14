@@ -2,10 +2,12 @@ services:
   - type: web
     name: todo-the-list
     env: node
-    buildCommand: npm install --production=false && npm run build
+    nodeVersion: 20
+    buildCommand: npm install && npm run build
     startCommand: npx serve -s build
     envVars:
       - key: NODE_ENV
         value: production
       - key: CI
         value: false
+    plan: free
