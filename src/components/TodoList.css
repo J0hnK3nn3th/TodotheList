@@ -100,6 +100,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 .unified-task-card .add-task-btn i {
@@ -121,6 +123,7 @@
   color: #495057;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 160px;
+  height: 40px;
   cursor: pointer;
   appearance: none;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
@@ -128,6 +131,7 @@
   background-position: right 12px center;
   background-size: 16px 12px;
   padding-right: 40px;
+  box-sizing: border-box;
 }
 
 .filter-select:focus {

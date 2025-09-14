@@ -93,9 +93,9 @@ function App() {
         <header className="text-center py-4">
           <h1 className="display-4 text-primary">
             <i className="bi bi-check2-square me-2"></i>
-            My Todo The List
-            <span className="lead text-muted ms-2">- Manage your tasks efficiently</span>
+            Todo The List
           </h1>
+          <p className="lead text-muted">Manage your tasks efficiently</p>
         </header>
         
         <div className="row justify-content-center">

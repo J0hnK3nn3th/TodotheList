@@ -26,7 +26,7 @@ const TodoList = ({ todos, allTodos, filter, onFilterChange, onToggle, onDelete,
                 <div className="stats-card card h-100">
                   <div className="card-body d-flex flex-column justify-content-center">
                     <h5 className="text-dark mb-2">{pendingCount}</h5>
-                    <small>Pending</small>
+                    <small>Unfinished Tasks</small>
                   </div>
                 </div>
               </div>
@@ -34,7 +34,7 @@ const TodoList = ({ todos, allTodos, filter, onFilterChange, onToggle, onDelete,
                 <div className="stats-card card h-100">
                   <div className="card-body d-flex flex-column justify-content-center">
                     <h5 className="text-dark mb-2">{completedCount}</h5>
-                    <small>Completed</small>
+                    <small>Finished Tasks</small>
                   </div>
                 </div>
               </div>
