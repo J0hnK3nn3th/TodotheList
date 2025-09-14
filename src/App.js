@@ -5,6 +5,7 @@ import AddTodo from './components/AddTodo';
 import EditTodo from './components/EditTodo';
 import useLocalStorage from './hooks/useLocalStorage';
 import { STORAGE_KEYS } from './utils/constants';
+import Swal from 'sweetalert2';
 
 function App() {
   const [todos, setTodos] = useLocalStorage(STORAGE_KEYS.TODOS, []);
@@ -24,6 +25,18 @@ function App() {
     };
     setTodos([...todos, newTodo]);
     setIsModalOpen(false);
+    
+    // Show success notification
+    Swal.fire({
+      title: 'Task Added!',
+      text: `"${todoData.title}" has been successfully added to your tasks.`,
+      icon: 'success',
+      timer: 3000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+      toast: true,
+      position: 'top-end'
+    });
   };
 
   const openModal = () => {
@@ -48,17 +61,69 @@ function App() {
     setTodos(todos.map(todo =>
       todo.id === id ? { ...todo, ...updatedData } : todo
     ));
+    
+    // Show success notification
+    Swal.fire({
+      title: 'Task Updated!',
+      text: `"${updatedData.title || todos.find(todo => todo.id === id)?.title}" has been successfully updated.`,
+      icon: 'success',
+      timer: 3000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+      toast: true,
+      position: 'top-end'
+    });
   };
 
   const toggleTodo = (id) => {
+    const todo = todos.find(todo => todo.id === id);
+    const newCompleted = !todo.completed;
+    
     setTodos(todos.map(todo =>
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      todo.id === id ? { ...todo, completed: newCompleted } : todo
     ));
+    
+    // Show success notification
+    Swal.fire({
+      title: newCompleted ? 'Task Completed!' : 'Task Marked as Unfinished!',
+      text: `"${todo.title}" has been ${newCompleted ? 'completed' : 'marked as unfinished'}.`,
+      icon: newCompleted ? 'success' : 'info',
+      timer: 3000,
+      timerProgressBar: true,
+      showConfirmButton: false,
+      toast: true,
+      position: 'top-end'
+    });
   };
 
-  const deleteTodo = (id) => {
-    if (window.confirm('Are you sure you want to delete this task?')) {
+  const deleteTodo = async (id) => {
+    const todoToDelete = todos.find(todo => todo.id === id);
+    
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: `"${todoToDelete?.title}" will be permanently deleted!`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Confirm Deletion',
+      cancelButtonText: 'Cancel'
+    });
+
+    if (result.isConfirmed) {
       setTodos(todos.filter(todo => todo.id !== id));
+      
+      // Show success notification
+      Swal.fire({
+        title: 'Task Deleted!',
+        text: `"${todoToDelete?.title}" has been successfully deleted.`,
+        icon: 'success',
+        timer: 3000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        toast: true,
+        position: 'top-end'
+      });
     }
   };
 
