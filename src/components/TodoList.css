@@ -1,0 +1,547 @@
+.todo-list {
+  margin-top: 5px;
+  animation: fadeInUp 0.8s ease-out;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-message {
+  color: #ccc;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Enhanced Statistics Cards */
+.stats-container {
+  margin-bottom: 0px;
+  height: 100%;
+}
+
+.stats-card {
+  background: white;
+  border: 1px solid #667eea;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 7px;
+  /* cursor: pointer; removed */
+}
+
+
+
+/* Stats card hover effect removed */
+
+.stats-card h5 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+/* Stats card h5 hover effect removed */
+
+.stats-card small {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  font-size: 0.85rem;
+}
+
+/* Unified Task Card */
+.unified-task-card {
+  margin-bottom: 25px;
+  border: 1px solid #667eea;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 415px;
+}
+
+.unified-task-card .card-header {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-bottom: 1px solid #dee2e6;
+  padding: 20px;
+}
+
+.unified-task-card .card-header h5 {
+  color: black;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.unified-task-card .card-header i {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.unified-task-card .add-task-btn {
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unified-task-card .add-task-btn i {
+  color: white;
+}
+
+/* Filter Dropdown Styling */
+.filter-container {
+  position: relative;
+}
+
+.filter-select {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 160px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 12px;
+  padding-right: 40px;
+}
+
+.filter-select:focus {
+  border-color: #667eea;
+  box-shadow: 
+    0 0 0 0.2rem rgba(102, 126, 234, 0.25),
+    0 4px 12px rgba(102, 126, 234, 0.15);
+  transform: translateY(-1px);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.filter-select:hover {
+  border-color: #667eea;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.unified-task-card .add-task-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+/* Add task button hover effects removed */
+
+/* Empty State Enhancement */
+.empty-state {
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.empty-state h4 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.empty-state p {
+  color: black;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.empty-state .add-task-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state .add-task-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+/* Empty state add task button hover effects removed */
+
+/* Task Item Container */
+.task-items-container {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+  max-height: 320px; /* Increased height to show more tasks before scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-right: 4px;
+}
+
+/* Custom Scrollbar Styling */
+.task-items-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-items-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.task-items-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+/* Scrollbar thumb hover effect removed */
+
+/* Firefox scrollbar styling */
+.task-items-container {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* Task Item Wrapper */
+.task-item-wrapper {
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.task-item-wrapper:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect removed */
+
+.task-item-wrapper .todo-item-card {
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.task-item-wrapper .todo-item-card:hover {
+  transform: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.task-item-wrapper .todo-item-card::before {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-list {
+    margin-top: 0px;
+  }
+  
+  .stats-container {
+    margin-bottom: 0px;
+  }
+  
+  .stats-container .row {
+    margin: 0 -5px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .stats-container .col-12 {
+    padding: 0 5px;
+    flex: 1;
+    max-width: 33.333%;
+  }
+  
+  .stats-card {
+    margin-bottom: 0px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .stats-card .card-body {
+    padding: 20px 15px;
+    width: 100%;
+  }
+  
+  .stats-card h5 {
+    font-size: 1.4rem;
+    margin-bottom: 6px !important;
+  }
+  
+  .stats-card small {
+    font-size: 0.7rem;
+  }
+  
+  .unified-task-card {
+    height: 300px;
+    margin-bottom: 15px;
+  }
+  
+  .task-items-container {
+    max-height: 180px; /* Much reduced height for tablet */
+  }
+  
+  .unified-task-card .card-header {
+    padding: 15px;
+  }
+  
+  .unified-task-card .card-header .d-flex {
+    flex-direction: row;
+    gap: 8px;
+    align-items: center !important;
+    flex-wrap: nowrap;
+  }
+  
+  .unified-task-card .card-header .d-flex .d-flex {
+    width: auto;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center !important;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .filter-container {
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+  }
+  
+  .filter-select {
+    width: 100%;
+    min-width: 100px;
+    font-size: 0.8rem;
+    padding: 6px 8px;
+    height: 38px;
+    box-sizing: border-box;
+  }
+  
+  .unified-task-card .card-header h5 {
+    font-size: 1.2rem;
+    width: auto;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  
+  .unified-task-card .add-task-btn {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 38px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .empty-state {
+    padding: 20px 15px;
+    margin: 8px 0;
+  }
+  
+  .empty-state i {
+    font-size: 2.5rem;
+  }
+  
+  .empty-state h4 {
+    font-size: 1.1rem;
+  }
+  
+  .empty-state p {
+    font-size: 0.95rem;
+  }
+  
+  .empty-state .add-task-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .todo-list {
+    margin-top: -5px;
+  }
+  
+  .stats-container {
+    margin-bottom: -5px;
+  }
+  
+  .stats-container .row {
+    margin: 0 -3px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .stats-container .col-12 {
+    padding: 0 3px;
+    flex: 1;
+    max-width: 33.333%;
+  }
+  
+  .stats-card {
+    margin-bottom: 0px;
+    min-height: 70px;
+    padding: 0;
+  }
+  
+  .stats-card .card-body {
+    padding: 10px 8px;
+  }
+  
+  .stats-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 4px !important;
+  }
+  
+  .stats-card small {
+    font-size: 0.65rem;
+  }
+  
+  .unified-task-card {
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .task-items-container {
+    max-height: 130px; /* Much reduced height for mobile */
+  }
+  
+  .unified-task-card .card-header {
+    padding: 8px;
+  }
+  
+  .unified-task-card .card-header h5 {
+    font-size: 1.1rem;
+    width: auto;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  
+  .unified-task-card .add-task-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-select {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    min-width: 100px;
+    height: 36px;
+    box-sizing: border-box;
+  }
+  
+  .filter-container {
+    min-width: 100px;
+  }
+  
+  .empty-state {
+    padding: 15px 12px;
+    margin: 5px 0;
+    border-radius: 12px;
+  }
+  
+  .empty-state i {
+    font-size: 2rem;
+  }
+  
+  .empty-state h4 {
+    font-size: 1.1rem;
+  }
+  
+  .empty-state p {
+    font-size: 0.9rem;
+  }
+  
+  .empty-state .add-task-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .modal-overlay {
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .modal-content {
+    max-height: calc(100vh - 20px);
+  }
+  
+  .add-todo-modal .add-todo-form {
+    padding: 15px 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+}
