@@ -94,8 +94,8 @@ function App() {
           <h1 className="display-4 text-primary">
             <i className="bi bi-check2-square me-2"></i>
             My Todo The List
+            <span className="lead text-muted ms-2">- Manage your tasks efficiently</span>
           </h1>
-          <p className="lead text-muted">Manage your tasks efficiently</p>
         </header>
         
         <div className="row justify-content-center">

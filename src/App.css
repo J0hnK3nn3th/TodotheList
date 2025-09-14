@@ -299,8 +299,8 @@ html, body {
   }
   
   .display-4 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
   }
   
   header {
@@ -309,13 +309,19 @@ html, body {
   }
   
   header h1 {
-    font-size: 1.8rem !important;
-    margin-bottom: 0.25rem;
+    font-size: 1.6rem !important;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   
-  header p {
-    font-size: 0.9rem !important;
+  header h1 .lead {
+    font-size: 0.8rem !important;
     margin-bottom: 0;
+    font-weight: 400;
   }
 }
 
@@ -344,8 +350,8 @@ html, body {
   }
   
   .display-4 {
-    font-size: 1.6rem !important;
-    margin-bottom: 0.25rem;
+    font-size: 1.4rem !important;
+    margin-bottom: 0;
   }
   
   header {
@@ -354,13 +360,19 @@ html, body {
   }
   
   header h1 {
-    font-size: 1.5rem !important;
-    margin-bottom: 0.2rem;
+    font-size: 1.3rem !important;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
   }
   
-  header p {
-    font-size: 0.8rem !important;
+  header h1 .lead {
+    font-size: 0.7rem !important;
     margin-bottom: 0;
+    font-weight: 400;
   }
   
   .btn {
